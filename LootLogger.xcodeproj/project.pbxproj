@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6824072A0A9D4100331CA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6824062A0A9D4100331CA4 /* DetailViewController.swift */; };
 		EA7236252A0845A900E089DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7236242A0845A900E089DA /* ItemCell.swift */; };
 		EAAC422F2A01482500D1CB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC422E2A01482500D1CB4C /* AppDelegate.swift */; };
 		EAAC42312A01482500D1CB4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC42302A01482500D1CB4C /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA6824062A0A9D4100331CA4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EA7236242A0845A900E089DA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		EAAC422B2A01482500D1CB4C /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAC422E2A01482500D1CB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				EAAC422E2A01482500D1CB4C /* AppDelegate.swift */,
 				EAAC42302A01482500D1CB4C /* SceneDelegate.swift */,
+				EA6824062A0A9D4100331CA4 /* DetailViewController.swift */,
 				EAAC425E2A01495100D1CB4C /* ItemsViewController.swift */,
 				EAAC42622A015DD100D1CB4C /* ItemStore.swift */,
 				EA7236242A0845A900E089DA /* ItemCell.swift */,
@@ -273,6 +276,7 @@
 				EAAC422F2A01482500D1CB4C /* AppDelegate.swift in Sources */,
 				EAAC42632A015DD100D1CB4C /* ItemStore.swift in Sources */,
 				EAAC42312A01482500D1CB4C /* SceneDelegate.swift in Sources */,
+				EA6824072A0A9D4100331CA4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
