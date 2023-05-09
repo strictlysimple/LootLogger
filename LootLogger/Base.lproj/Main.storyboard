@@ -80,6 +80,7 @@
                                         <constraint firstItem="L3P-Cq-TPF" firstAttribute="leading" secondItem="d1C-NX-QBx" secondAttribute="leadingMargin" id="UCg-mA-BT8"/>
                                         <constraint firstItem="ufu-iw-Laz" firstAttribute="leading" secondItem="L3P-Cq-TPF" secondAttribute="leading" id="V2n-ev-FaJ"/>
                                         <constraint firstItem="L3P-Cq-TPF" firstAttribute="top" secondItem="d1C-NX-QBx" secondAttribute="topMargin" id="ZXD-vy-IsC"/>
+                                        <constraint firstItem="ufu-iw-Laz" firstAttribute="top" secondItem="L3P-Cq-TPF" secondAttribute="bottom" constant="16" id="adX-SJ-mS7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
