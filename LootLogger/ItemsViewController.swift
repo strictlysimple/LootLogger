@@ -87,4 +87,10 @@ class ItemsViewController: UITableViewController {
             preconditionFailure("Unexpected Segue Identifier.")
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 }
