@@ -7,9 +7,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
-    var item: Item!
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        valueField.keyboardType = .numberPad
+    }
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -31,6 +41,15 @@ class DetailViewController: UIViewController {
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -42,6 +61,9 @@ class DetailViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        //clear first responder
+        view.endEditing(true)
         
         item.name = nameField.text ?? ""
         item.serialNumber = serialNumberField.text

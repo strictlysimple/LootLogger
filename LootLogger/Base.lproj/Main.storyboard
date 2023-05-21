@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--LootLogger-->
         <scene sceneID="2SC-Iz-aMV">
             <objects>
                 <tableViewController id="mfB-hg-dYV" customClass="ItemsViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,40 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="OG6-h0-3xo">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1m-Cq-Ru2">
-                                    <rect key="frame" x="219" y="12.666666666666664" width="203" height="35"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="mfB-hg-dYV" eventType="touchUpInside" id="OO6-dq-POE"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-Lw-EmE">
-                                    <rect key="frame" x="8" y="12.666666666666664" width="203" height="35"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="mfB-hg-dYV" eventType="touchUpInside" id="fP8-iu-nMI"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="u1m-Cq-Ru2" firstAttribute="width" secondItem="3ZY-Lw-EmE" secondAttribute="width" id="2qX-Hr-0ib"/>
-                                <constraint firstItem="3ZY-Lw-EmE" firstAttribute="leading" secondItem="OG6-h0-3xo" secondAttribute="leading" constant="8" id="7kG-MI-Vy7"/>
-                                <constraint firstItem="u1m-Cq-Ru2" firstAttribute="centerY" secondItem="OG6-h0-3xo" secondAttribute="centerY" id="Bgh-8u-3kf"/>
-                                <constraint firstAttribute="trailing" secondItem="u1m-Cq-Ru2" secondAttribute="trailing" constant="8" id="HUx-2M-Dik"/>
-                                <constraint firstItem="u1m-Cq-Ru2" firstAttribute="leading" secondItem="3ZY-Lw-EmE" secondAttribute="trailing" constant="8" id="I5b-If-jRr"/>
-                                <constraint firstItem="3ZY-Lw-EmE" firstAttribute="centerY" secondItem="OG6-h0-3xo" secondAttribute="centerY" id="SRI-yu-yhL"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="uVO-lj-mQB" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="110" width="430" height="65"/>
+                                <rect key="frame" x="0.0" y="50" width="430" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uVO-lj-mQB" id="d1C-NX-QBx">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="65"/>
@@ -97,7 +66,13 @@
                             <outlet property="delegate" destination="mfB-hg-dYV" id="whv-ks-tHH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PO3-HI-rt7"/>
+                    <navigationItem key="navigationItem" title="LootLogger" id="d31-YW-jdm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gQM-AT-f6Q">
+                            <connections>
+                                <action selector="addNewItem:" destination="mfB-hg-dYV" id="4w3-Ie-Ksc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJb-sy-BWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +102,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Oen-nO-qFo" id="tNF-ui-LDQ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -143,6 +121,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Oen-nO-qFo" id="pWp-fK-Lwj"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -159,6 +140,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Oen-nO-qFo" id="TIF-en-qW4"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -177,12 +161,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L5X-rv-quZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JMg-xM-Kw2" firstAttribute="leading" secondItem="L5X-rv-quZ" secondAttribute="leading" constant="20" id="QoC-3r-Gzx"/>
                             <constraint firstItem="L5X-rv-quZ" firstAttribute="trailing" secondItem="JMg-xM-Kw2" secondAttribute="trailing" constant="20" id="ldh-23-vBj"/>
                             <constraint firstItem="JMg-xM-Kw2" firstAttribute="top" secondItem="L5X-rv-quZ" secondAttribute="top" constant="8" id="oKt-n0-6Z7"/>
                             <constraint firstItem="L5X-rv-quZ" firstAttribute="bottom" secondItem="JMg-xM-Kw2" secondAttribute="bottom" constant="8" id="yO8-Dw-CcE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eyI-Qe-e8I" appends="YES" id="riL-tJ-ptN"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="WWG-Su-40S"/>
                     <connections>
@@ -193,6 +181,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FL-0E-Ncu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eyI-Qe-e8I">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="Oen-nO-qFo" id="f1z-Er-JOo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1741.3953488372092" y="-57.296137339055797"/>
         </scene>

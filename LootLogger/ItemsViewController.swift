@@ -18,7 +18,13 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
         
         if let index = itemStore.allItems.firstIndex(of: newItem){
@@ -27,19 +33,7 @@ class ItemsViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
-    
-    @IBAction func toggleEditingMode(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: .normal)
-            
-            setEditing(true, animated: true)
-        }
-    }
-    
+        
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
@@ -92,5 +86,9 @@ class ItemsViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationItem.backButtonTitle = ""
     }
 }
