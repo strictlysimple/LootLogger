@@ -33,6 +33,22 @@ class ItemStore {
                                        object: nil)
     }
     
+    @objc func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL)")
+        
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(allItems)
+            
+            try data.write(to: itemArchiveURL, options: [.atomic])
+            print("saved all of the items")
+            return true
+        } catch let encodingError {
+            print("Error encoding allItem: \(encodingError)")
+            return false
+        }
+    }
+    
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
         allItems.append(newItem)
@@ -55,19 +71,5 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
     
-    @objc func saveChanges() -> Bool {
-        print("Saving items to: \(itemArchiveURL)")
-        
-        do {
-            let encoder = PropertyListEncoder()
-            let data = try encoder.encode(allItems)
-            
-            try data.write(to: itemArchiveURL, options: [.atomic])
-            print("saved all of the items")
-            return true
-        } catch let encodingError {
-            print("Error encoding allItem: \(encodingError)")
-            return false
-        }
-    }
+
 }
