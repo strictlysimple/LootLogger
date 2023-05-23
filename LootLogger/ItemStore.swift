@@ -32,4 +32,14 @@ class ItemStore {
         allItems.remove(at: fromIndex)
         allItems.insert(movedItem, at: toIndex)
     }
+    
+    func saveChahges() -> Bool {
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(allItems)
+        } catch let encodingError {
+            print("Error encoding allItem: \(encodingError)")
+        }
+        return false
+    }
 }

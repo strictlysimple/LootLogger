@@ -109,8 +109,8 @@
 			children = (
 				EAAC422E2A01482500D1CB4C /* AppDelegate.swift */,
 				EAAC42302A01482500D1CB4C /* SceneDelegate.swift */,
-				EA6824062A0A9D4100331CA4 /* DetailViewController.swift */,
 				EAAC425E2A01495100D1CB4C /* ItemsViewController.swift */,
+				EA6824062A0A9D4100331CA4 /* DetailViewController.swift */,
 				EAAC42622A015DD100D1CB4C /* ItemStore.swift */,
 				EA7236242A0845A900E089DA /* ItemCell.swift */,
 				EAAC42602A014D6000D1CB4C /* Item.swift */,
