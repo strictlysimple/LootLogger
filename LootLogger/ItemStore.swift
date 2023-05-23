@@ -33,7 +33,7 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
     
-    func saveChahges() -> Bool {
+    func saveChanges() -> Bool {
         do {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(allItems)
