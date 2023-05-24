@@ -146,11 +146,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5c-Rs-Ksw">
-                                        <rect key="frame" x="0.0" y="126" width="390" height="604"/>
+                                        <rect key="frame" x="0.0" y="125.99999999999999" width="390" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="v2p-By-arO">
+                                        <rect key="frame" x="0.0" y="154.33333333333331" width="390" height="575.66666666666674"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="eOI-3d-1ZR" firstAttribute="leading" secondItem="m9o-XV-gX0" secondAttribute="leading" id="55Q-kz-F9L"/>
@@ -186,6 +189,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WWG-Su-40S"/>
                     <connections>
+                        <outlet property="ImageView" destination="v2p-By-arO" id="xXi-Wy-eGJ"/>
                         <outlet property="dateLabel" destination="n5c-Rs-Ksw" id="BAZ-ha-djG"/>
                         <outlet property="nameField" destination="eOI-3d-1ZR" id="h8f-Hx-Guu"/>
                         <outlet property="serialNumberField" destination="m9o-XV-gX0" id="xDn-eW-atz"/>

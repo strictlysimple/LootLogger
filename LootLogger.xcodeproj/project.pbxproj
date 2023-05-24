@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA6824072A0A9D4100331CA4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6824062A0A9D4100331CA4 /* DetailViewController.swift */; };
 		EA7236252A0845A900E089DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7236242A0845A900E089DA /* ItemCell.swift */; };
+		EA9C02572A1E26B7004D5B41 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C02562A1E26B7004D5B41 /* ImageStore.swift */; };
 		EAAC422F2A01482500D1CB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC422E2A01482500D1CB4C /* AppDelegate.swift */; };
 		EAAC42312A01482500D1CB4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC42302A01482500D1CB4C /* SceneDelegate.swift */; };
 		EAAC42362A01482500D1CB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAC42342A01482500D1CB4C /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		EA6824062A0A9D4100331CA4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EA7236242A0845A900E089DA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		EA9C02562A1E26B7004D5B41 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		EAAC422B2A01482500D1CB4C /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAC422E2A01482500D1CB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAAC42302A01482500D1CB4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				EAAC425E2A01495100D1CB4C /* ItemsViewController.swift */,
 				EA6824062A0A9D4100331CA4 /* DetailViewController.swift */,
 				EAAC42622A015DD100D1CB4C /* ItemStore.swift */,
+				EA9C02562A1E26B7004D5B41 /* ImageStore.swift */,
 				EA7236242A0845A900E089DA /* ItemCell.swift */,
 				EAAC42602A014D6000D1CB4C /* Item.swift */,
 				EAAC42342A01482500D1CB4C /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				EAAC42612A014D6000D1CB4C /* Item.swift in Sources */,
 				EAAC425F2A01495100D1CB4C /* ItemsViewController.swift in Sources */,
 				EA7236252A0845A900E089DA /* ItemCell.swift in Sources */,
+				EA9C02572A1E26B7004D5B41 /* ImageStore.swift in Sources */,
 				EAAC422F2A01482500D1CB4C /* AppDelegate.swift in Sources */,
 				EAAC42632A015DD100D1CB4C /* ItemStore.swift in Sources */,
 				EAAC42312A01482500D1CB4C /* SceneDelegate.swift in Sources */,
@@ -456,6 +460,7 @@
 				DEVELOPMENT_TEAM = PT7L42U54T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to associate photos with items";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,6 +489,7 @@
 				DEVELOPMENT_TEAM = PT7L42U54T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to associate photos with items";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
