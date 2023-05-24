@@ -71,5 +71,5 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
     
-
+    
 }
